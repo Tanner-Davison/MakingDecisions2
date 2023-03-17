@@ -69,16 +69,18 @@ var score = 74
 */
 
 //Code Here
-switch (score) {
-  case 90: console.log("A")
+switch (true) {
+  case (score >= 90): console.log("A")
   break;
-  case >=80: console.log("B")
+  case (score >= 80): console.log ("B")
   break;
-  case >=70: console.log("C")
+  case (score >= 70): console.log("C")
   break;
-  case  console.log("D")
+  case (score >= 60):console.log ("D")
   break;
-  case score<60: console.log("F")
+  case (score <60): console.log ("F")
+  break;
+  default: console.log ("Invalid Score")
 }
 
 ////////// Intermediate Problems //////////
@@ -86,7 +88,7 @@ switch (score) {
 ////////// PROBLEM 6 //////////
 
 // Do not edit the code below.
-var myFavoriteNumbers = [4,8,12,16,20,24];
+var myFavoriteNumbers = [4,8,12,16,20,24,11,15,44];
 // Do not edit the code above.
 
 /*
@@ -94,12 +96,20 @@ var myFavoriteNumbers = [4,8,12,16,20,24];
 */
 
 //Code Here
-
+someNum = myFavoriteNumbers[5]
+console.log(someNum)
 
 ////////// PROBLEM 7 //////////
 
 // Subscripting (accessing values using their index) an array can fail. What happens if you subscript to the 7th element, but there are not 7 elements in the array? Let's write some code to check for that. 
-// Use an if statement to check the length of the 'myFavoriteNumbers' array. If it's less than 7, log 'There are not enough elements in this array' to the console. If the length is more than 7, reassign the value of 'someNum' to the value of the 7th element in the array. (Hint: how can you make sure that your code works for exactly 7 elements? What index do you use to get the 7th element?)
+// Use an if statement to check the length of the 'myFavoriteNumbers. If it's less than 7mbers' arra, log 'There are not enough elements in this array' to the console. If the length is more than 7, reassign the value of 'someNum' to the value of the 7th element in the array. (Hint: how can you make sure that your code works for exactly 7 elements? What index do you use to get the 7th element?)
+if (myFavoriteNumbers.length<7){
+console.log("There are not enough elements in this array")
+}
+else if(myFavoriteNumbers.length>=7){
+  someNum = myFavoriteNumbers[7]
+  console.log(someNum)
+}
 
 //Code Here
 
@@ -113,7 +123,12 @@ var listOfNumbers = [1,2,3,4,5,6,7,8,9,10,11,12];
 // Use a for-loop to iterate through 'listOfNumbers', checking to see if each number is divisible by 3. If it is, console.log '{number} is divisible by 3.'
 
 //Code Here
-
+for(let i=0; i<listOfNumbers.length; i++){
+listOfNumbers[i]+= 1
+if(i%3===0){
+  console.log(`${i} Number is divisible by 3`)
+}
+}
 
 ////////// PROBLEM 9 //////////
 // Do not edit the code below.
@@ -125,7 +140,13 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 */
 
 //Code Here
+const reversedArray =[]
+for(let i=letters.length-1;i>=0; i--){
+  const reversed = letters[i]
 
+  reversedArray.push(reversed)
+}
+console.log(reversedArray)
 
 ////////// Advanced Problems //////////
 
@@ -147,7 +168,17 @@ If the letter grade is not one of the above letters, console.log 'Not an eligibl
 */
 
 //Code Here
-
+switch(letterGrade){
+  case 'A': console.log ("The student is doing excellently.")
+  break;
+  case 'B': console.log("The student is doing well.")
+  break;
+  case 'C': console.log("The student is not doing very well.")
+  break;
+  case 'F': console.log("The student is failing")
+  break;
+  default: console.log("Not an eligible grade.")
+}
 
 
 ////////// PROBLEM 11 //////////
@@ -175,3 +206,18 @@ If the letter grade is not one of the above letters, console.log 'Not an eligibl
 */
 
 //Code Here
+for(Tnumber=1;Tnumber<100;Tnumber++){
+Tnumber+=1
+if(Tnumber%3===0){
+  console.log("Dev")}
+
+else if (Tnumber%5===0){
+  console.log("Mountain")}
+
+else if (Tnumber%3===0 &&Tnumber%5===0){
+  console.log("DevMountain")
+}
+else (Tnumber%3===1 &&Tnumber%5===1);{
+  console.log(Tnumber)
+}
+}
